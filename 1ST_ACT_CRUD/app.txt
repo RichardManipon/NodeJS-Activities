@@ -1,0 +1,159 @@
+const express = require("express");
+const app = express();
+const port = 3000;
+
+// starting page
+app.get("/", (req, res) => {
+  res.send("This is the index page.");
+});
+
+// show all rows
+app.get("/index", async (req, res) => {
+  // require mysql2
+  const mysql = require("mysql2/promise");
+
+  // create the connection
+  const connection = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "sql_node",
+  });
+
+  // create query to db
+  try {
+    const [rows, fields] = await connection.execute("SELECT * FROM `test`");
+    console.log(rows);
+    res.send(rows);
+  } catch (err) {
+    res.send("Something went wong");
+    throw err;
+  }
+});
+
+// insert row
+app.get("/insert", async (req, res) => {
+  // require mysql2
+  const mysql = require("mysql2/promise");
+
+  // create the connection
+  const connection = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "sql_node",
+  });
+
+  // create query to db
+  try {
+    const [rows, fields] = await connection.execute(
+      "INSERT INTO `test` (firstName, lastName, phone, address1, address2, email) VALUES (?, ?, ?, ?, ?, ?)",
+      [
+        req.query.fname,
+        req.query.lname,
+        req.query.phone,
+        req.query.address1,
+        req.query.address2,
+        req.query.email,
+      ]
+    );
+    console.log(rows);
+    res.send(rows);
+  } catch (err) {
+    res.send("Something went wong");
+    throw err;
+  }
+});
+
+// delete a row
+app.get("/delete", async (req, res) => {
+  // require mysql2
+  const mysql = require("mysql2/promise");
+
+  // create the connection
+  const connection = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "sql_node",
+  });
+
+  // create query to db
+  try {
+    const [rows, fields] = await connection.execute(
+      "DELETE FROM `test` WHERE id = ?",
+      [req.query.id]
+    );
+    console.log(rows);
+    res.send(rows);
+  } catch (err) {
+    res.send("Something went wong");
+    throw err;
+  }
+});
+
+// update a row
+app.get("/update", async (req, res) => {
+  // require mysql2
+  const mysql = require("mysql2/promise");
+
+  // create connection
+  const connection = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "sql_node",
+  });
+
+  // create query to db
+  try {
+    const [rows, fields] = await connection.execute(
+      "UPDATE `test` SET firstName = ?, lastName = ?, phone = ?, address1 = ?, address2 = ?, email = ? WHERE id = ?",
+      [
+        req.query.fname,
+        req.query.lname,
+        req.query.phone,
+        req.query.address1,
+        req.query.address2,
+        req.query.email,
+        req.query.id,
+      ]
+    );
+    console.log(rows);
+    res.send(rows);
+  } catch (err) {
+    res.send("Something went wong");
+    throw err;
+  }
+});
+
+// show single row
+app.get("/show", async (req, res) => {
+  // require mysql2
+  const mysql = require("mysql2/promise");
+
+  // create the connection
+  const connection = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "sql_node",
+  });
+
+  // query database
+  try {
+    const [rows, fields] = await connection.execute(
+      "SELECT * FROM `test` WHERE id = ?",
+      [req.query.id]
+    );
+    console.log(rows);
+    res.send(rows);
+  } catch (err) {
+    res.send("Something went wong");
+    throw err;
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
