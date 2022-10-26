@@ -1,0 +1,53 @@
+const express = require("express");
+const app = express();
+const port = process.env.port || 3000;
+const mysql = require("mysql2");
+
+// create the connection to database
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "camera_db",
+});
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// api to insert row using POST method
+// return JSON
+app.post("/api/camera/insert", (req, res) => {
+  // create query to db
+  connection.execute(
+    "INSERT INTO `detected` (start_time, end_time) VALUES (?, ?)",
+    [req.body.start_time, req.body.end_time],
+    (err, results, fields) => {
+      if (err) throw err;
+      res.json({
+        message: `recorded new motion.`,
+        inserted_at_id: results.insertId,
+      });
+      console.log(
+        JSON.stringify({
+          message: `recorded new motion.`,
+          inserted_at_id: results.insertId,
+        })
+      );
+    }
+  );
+});
+
+// api to insert row using POST method
+// return JSON
+app.get("/api/camera/index", (req, res) => {
+  // create query to db
+  connection.execute("SELECT * FROM `detected`", (err, results, fields) => {
+    if (err) throw err;
+    res.send(results);
+    console.log(results);
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
