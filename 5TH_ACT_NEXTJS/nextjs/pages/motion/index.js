@@ -12,13 +12,15 @@ export const getStaticProps = async () => {
 };
 
 const Motion = ({ motions }) => {
-  console.log(motions);
+  console.log(motions.length);
+
   return (
     <div>
+      <h1>Motion List</h1>
       {motions.map((motion) => (
         <Link href={`motion/${motion.id}`} key={motion.id}>
           <a>
-            <h3>{motion.start_time}</h3>
+            <p>{motions.length != 0 ? "Motion id: " + motion.id : "no data"}</p>
           </a>
         </Link>
       ))}
