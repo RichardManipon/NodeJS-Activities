@@ -28,16 +28,11 @@ export const getStaticProps = async (context) => {
 };
 
 const Details = ({ motion }) => {
-  //   console.log("motions:", motion);
-  motion.map((m) => {
-    console.log(m.start_time);
-  });
-  //   ${atob(m.image)};
   return (
     <div>
       {motion.map((m) => (
         <div>
-          <h1>Motion {m.id}</h1>
+          <h1>Motion {m.id} Details</h1>
           <p>Start time: {m.start_time}</p>
           <p>End time: {m.end_time}</p>
           <img
