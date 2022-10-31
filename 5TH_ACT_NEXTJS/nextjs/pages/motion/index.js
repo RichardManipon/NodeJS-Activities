@@ -12,8 +12,6 @@ export const getStaticProps = async () => {
 };
 
 const Motion = ({ motions }) => {
-  console.log(motions.length);
-
   return (
     <div>
       <h1>Motion List</h1>
