@@ -1,0 +1,59 @@
+.dev {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p {
+  font-size: 1.5rem;
+}
+
+.text {
+  width: 50%;
+}
+
+.name {
+  font-family: "Inter", "sans-serif";
+  color: #172864;
+  font-weight: 700;
+}
+
+.role {
+  font-family: "Inter", "sans-serif";
+  color: #4b4d54;
+  font-weight: 600;
+}
+
+.imgdiv {
+  position: relative;
+  max-height: 40%;
+  max-width: 40%;
+}
+
+.img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btngroup {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  width: 97px;
+  height: 33px;
+  box-shadow: 0px 4px 4px #0000005e;
+}
+
+.btngroup img {
+  cursor: pointer;
+}

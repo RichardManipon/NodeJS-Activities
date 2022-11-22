@@ -1,0 +1,51 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  width: 50%;
+  max-width: 680px;
+}
+
+.spanintro {
+  font-family: "Inter", "sans-serif";
+  font-weight: 600;
+  color: #939393;
+}
+
+.h1 {
+  font-family: "Inter", "sans-serif";
+  font-size: 3rem;
+  color: #00155e;
+}
+
+.p {
+  font-size: 1rem;
+  color: #101010;
+}
+
+.contactbtn1 {
+  font-family: "Inter", "sans-serif";
+  height: 40px;
+  width: 120px;
+  border: 4px solid #172864;
+  background-color: white;
+  color: #172864;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contactbtn1:hover {
+  background-color: #172864;
+  color: white;
+  transition: 100ms;
+}
+
+.hero {
+  height: 50%;
+  width: 50%;
+  max-width: 570px;
+  max-height: 520px;
+}
