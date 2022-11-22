@@ -1,0 +1,62 @@
+.contactbg {
+  padding: 60px 80px;
+  background-color: #172864;
+}
+
+.spanintro {
+  font-family: "Inter", "sans-serif";
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.h1 {
+  font-family: "Inter", "sans-serif";
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.inputdiv {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.inputdiv input {
+  padding: 10px;
+}
+
+.inputdiv textarea {
+  padding: 10px;
+  resize: none;
+}
+
+.inputspan {
+  font-family: "Inter", "sans-serif";
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.send {
+  font-family: "Inter", "sans-serif";
+  height: 40px;
+  width: 120px;
+  border: 2px solid #172864;
+  background-color: white;
+  color: #172864;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.send:hover {
+  background-color: #172864;
+  color: white;
+  border: 2px solid #ffffff;
+  transition: 100ms;
+}

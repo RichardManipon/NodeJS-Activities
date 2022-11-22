@@ -1,10 +1,15 @@
 .nav {
-  /* position: fixed; */
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
   width: 100%;
+  padding: 0 80px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
 .links {
@@ -15,10 +20,35 @@
   width: 260px;
 }
 
-/* .links a {
-  width: 0;
-  height: 5px;
-  background-image: linear-gradient(to right, #ff0000, red);
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-} */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 100%;
+  background-color: gray;
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    padding: 0 30px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

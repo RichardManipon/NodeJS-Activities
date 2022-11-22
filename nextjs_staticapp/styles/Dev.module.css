@@ -2,10 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 80px;
 }
 
 .p {
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #050c27;
 }
 
 .text {
@@ -20,8 +23,8 @@
 
 .role {
   font-family: "Inter", "sans-serif";
-  color: #4b4d54;
-  font-weight: 600;
+  color: #4b4d5486;
+  font-weight: 400;
 }
 
 .imgdiv {
