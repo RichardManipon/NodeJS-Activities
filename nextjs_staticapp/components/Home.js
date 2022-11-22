@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div className={styles.home} id="home">
       <div className={styles.text}>
         <span className={styles.spanintro}>Welcome</span>
         <h1 className={styles.h1}>Design and Develop Website with Purpose</h1>

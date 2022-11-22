@@ -1,6 +1,6 @@
 import styles from "../styles/Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ setHamburgerMenu }) => {
   return (
     <nav className={styles.nav}>
       <div>
@@ -17,6 +17,14 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </li>
       </ul>
+      <button
+        className={styles.hamburger}
+        onClick={() => setHamburgerMenu(true)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   );
 };

@@ -1,0 +1,56 @@
+import stylehome from "../styles/Home.module.css";
+import styledev from "../styles/Dev.module.css";
+import styleglobals from "../styles/Globals.module.css";
+import Richard from "./devs/Richard";
+import Louise from "./devs/Louise";
+import Justine from "./devs/Justine";
+import James from "./devs/James";
+import Daryl from "./devs/Daryl";
+import { useState, useEffect } from "react";
+
+const AboutDev = () => {
+  const [carousel, setCarousel] = useState(1);
+
+  return (
+    <div className={styleglobals.padd2} id="about">
+      {carousel == 1 ? (
+        <Richard
+          stylehome={stylehome}
+          styledev={styledev}
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
+      ) : carousel == 2 ? (
+        <Louise
+          stylehome={stylehome}
+          styledev={styledev}
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
+      ) : carousel == 3 ? (
+        <Justine
+          stylehome={stylehome}
+          styledev={styledev}
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
+      ) : carousel == 4 ? (
+        <James
+          stylehome={stylehome}
+          styledev={styledev}
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
+      ) : (
+        <Daryl
+          stylehome={stylehome}
+          styledev={styledev}
+          carousel={carousel}
+          setCarousel={setCarousel}
+        />
+      )}
+    </div>
+  );
+};
+
+export default AboutDev;

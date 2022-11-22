@@ -2,11 +2,36 @@ import stylehome from "../styles/Home.module.css";
 import styledev from "../styles/Dev.module.css";
 import styleglobals from "../styles/Globals.module.css";
 import Richard from "./devs/Richard";
+import Louise from "./devs/Louise";
+import Justine from "./devs/Justine";
+import James from "./devs/James";
+import Daryl from "./devs/Daryl";
+import Dev from "./Dev";
+import { useState, useEffect } from "react";
 
 const AboutDev = () => {
+  const [carousel, setCarousel] = useState(1);
+  const [intro, setIntro] = useState("Ako si poging manipon");
+  const [name, setName] = useState("Richard Manipon");
+  const [role, setRole] = useState("Designer");
+  const [image, setImage] = useState("manipon.svg");
+
   return (
-    <div className={styleglobals.padd2}>
-      <Richard stylehome={stylehome} styledev={styledev} />
+    <div className={styleglobals.padd2} id="about">
+      <Dev
+        stylehome={stylehome}
+        styledev={styledev}
+        carousel={carousel}
+        setCarousel={setCarousel}
+        intro={intro}
+        setIntro={setIntro}
+        name={name}
+        setName={setName}
+        role={role}
+        setRole={setRole}
+        image={image}
+        setImage={setImage}
+      />
     </div>
   );
 };
