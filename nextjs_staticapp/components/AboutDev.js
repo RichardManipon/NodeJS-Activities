@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const AboutDev = () => {
   const [carousel, setCarousel] = useState(1);
-  const [intro, setIntro] = useState("Ako si poging manipon");
+  const [intro, setIntro] = useState("");
   const [name, setName] = useState("Richard Manipon");
   const [role, setRole] = useState("Designer");
   const [image, setImage] = useState("manipon.svg");
