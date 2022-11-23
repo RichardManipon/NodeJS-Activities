@@ -10,7 +10,9 @@ const Home = () => {
           We are a small group of developers who solves problems, then write
           code.
         </p>
-        <button className={styles.contactbtn1}>Contact Us</button>
+        <a href="#contact" className={styles.contactbtn1}>
+          Contact Us
+        </a>
       </div>
       <img className={styles.hero} src="/Hero.svg" alt="" />
     </div>

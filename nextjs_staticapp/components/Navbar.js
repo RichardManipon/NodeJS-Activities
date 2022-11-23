@@ -3,12 +3,15 @@ import styles from "../styles/Navbar.module.css";
 const Navbar = ({ setHamburgerMenu }) => {
   return (
     <nav className={styles.nav}>
-      <div>
+      <div className={styles.logo}>
         <a href="#home">Iskulbukul</a>
       </div>
       <ul className={styles.links}>
         <li>
           <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#goals">Goals</a>
         </li>
         <li>
           <a href="#about">About</a>
