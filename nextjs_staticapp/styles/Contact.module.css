@@ -60,3 +60,15 @@
   border: 2px solid #ffffff;
   transition: 100ms;
 }
+
+@media screen and (max-width: 700px) {
+  .contactbg {
+    padding: 60px 30px;
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .inputdiv {
+    width: 100%;
+  }
+}

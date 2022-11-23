@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 60px 80px;
 }
 
 .p {
@@ -59,4 +59,19 @@
 
 .btngroup img {
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .dev {
+    flex-direction: column-reverse;
+    padding: 60px 30px;
+    justify-content: center;
+  }
+  .text {
+    width: 100%;
+  }
+  .imgdiv {
+    max-height: 100%;
+    max-width: 100%;
+  }
 }

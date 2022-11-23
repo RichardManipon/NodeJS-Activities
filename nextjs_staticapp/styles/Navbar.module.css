@@ -12,11 +12,20 @@
   z-index: 999;
 }
 
+.logo a {
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: rgb(224, 224, 224);
+  text-shadow: 2px 2px #36007c;
+}
+
 .links {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
+  color: rgb(97, 97, 97);
   width: 260px;
 }
 

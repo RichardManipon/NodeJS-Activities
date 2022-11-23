@@ -29,8 +29,7 @@
 
 .contactbtn1 {
   font-family: "Inter", "sans-serif";
-  height: 40px;
-  width: 120px;
+  padding: 5px 20px;
   border: 2px solid #172864;
   background-color: white;
   color: #172864;
@@ -54,7 +53,7 @@
 @media screen and (max-width: 700px) {
   .home {
     flex-direction: column;
-    padding: 90px 30px 0px 30px;
+    padding: 90px 30px 60px 30px;
   }
 
   .text {
